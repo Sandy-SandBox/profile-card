@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap");
+/*****************************/
+/* Variables */
+/*****************************/
+/*******************************/
+/* Reset Styles */
+/*******************************/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  /* 62.5% = 10px */
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #daf7fe;
+  display: grid;
+  place-items: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+  overflow-x: hidden;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: inherit;
+  outline: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+/*******************************/
+/* Reusable Classes */
+/*******************************/
+.text-center {
+  text-align: center;
+}
+
+.mg-auto {
+  margin: 0 auto;
+}
+
+/***** FlexBox Classes *****/
+.flex {
+  display: flex;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-items-center {
+  align-items: center;
+}
+.flex-justify-center {
+  justify-content: center;
+}
+.flex-justify-between {
+  justify-content: space-between;
+}
+.flex-justify-around {
+  justify-content: space-around;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-1 {
+  flex: 1;
+}
+
+/****************************/
+/* Home Page */
+/****************************/
+.card {
+  width: min(35rem, 90%);
+  height: 85vh;
+  max-height: 60rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(27, 25, 40, 0.2);
+  position: relative;
+}
+
+/****************************/
+/* Header */
+/****************************/
+.header {
+  font-size: 1.8rem;
+  color: #1b1928;
+}
+.header__logo {
+  font-family: "Pacifico", cursive;
+  font-size: 1.8rem;
+  color: #1b1928;
+  font-weight: 800;
+}
+
+/****************************/
+/* Navigation */
+/****************************/
+.nav {
+  width: 90%;
+  height: 6rem;
+  background-color: #fff;
+  border-radius: 5rem;
+  position: absolute;
+  bottom: 5%;
+  box-shadow: 0 0 5px rgba(27, 25, 40, 0.2), 0 10px 20px rgba(27, 25, 40, 0.09);
+}
+.nav__list {
+  width: 100%;
+}
+.nav__link {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #32303e;
+  position: relative;
+  z-index: 1;
+  transition: all 600ms;
+  overflow: hidden;
+}
+.nav__link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #77e2fb;
+  z-index: -1;
+  transition: all 600ms;
+  transform: scale(0);
+}
+.nav__link:hover::before {
+  transform: scale(1);
+}
+.nav__link.active::before {
+  transform: scale(1);
+}
+
+/****************************/
+/* Profile */
+/****************************/
+.profile {
+  text-align: center;
+}
+.profile__img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 1.3rem;
+}
+.profile__img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.profile__name {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #1b1928;
+  margin-bottom: 0.5rem;
+}
+.profile__txt {
+  font-size: 1.2rem;
+  color: #555169;
+  line-height: 1.6;
+  font-weight: 500;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.social {
+  margin-top: 3rem;
+  justify-content: space-around;
+}
+.social__item {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.social__link {
+  width: 5.5rem;
+  height: 5.5rem;
+  background-color: hotpink;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.social__link i {
+  font-size: 2.5rem;
+  color: #fff;
+}
+.social__link--1 {
+  background-image: linear-gradient(90deg, #ed0c66, #e453cd);
+}
+.social__link--2 {
+  background-image: linear-gradient(90deg, #2948d0, #9b9ff8);
+}
+.social__link--3 {
+  background-image: linear-gradient(90deg, #222, #666);
+}
+.social__followers {
+  text-align: center;
+}
+.social__count {
+  font-size: 1.8rem;
+  color: #454067;
+}
+.social__txt {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding-top: 0.5px;
+}
+
+.btn, .btn:link, .btn:visited {
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-radius: 10rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 300ms;
+}
+.btn--primary {
+  background-image: linear-gradient(to right, hotpink, #035b70);
+  color: #fff;
+  box-shadow: 0 5px 10px rgba(27, 25, 40, 0.2);
+}
+.btn--primary:hover, .btn--primary:active {
+  box-shadow: 0 2px 5px rgba(27, 25, 40, 0.2);
+}
+
+/*# sourceMappingURL=index.css.map */

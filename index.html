@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <!--========== Remix Icons ===========-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!--============ Custom Css ==========-->
+  <link rel="stylesheet" href="css/index.css">
+  <title>profile-card</title>
+</head>
+<body>
+
+  <main class="main">
+    <article class="card">
+      <!-- Header -->
+      <header class="header flex flex-items-center flex-justify-between">
+        <a href="#" class="header__logo">
+          Sandy
+        </a>
+        <div class="header__right">
+          <i class="ri-heart-line header__right-icon"></i>
+          <i class="ri-more-2-fill header__right"></i>
+        </div>
+      </header>
+      <!-- Navigation -->
+      <nav class="nav flex-center">
+        <ul class="nav__list flex flex-items-center flex-justify-around">
+          <li class="nav__item">
+            <a href="#" class="nav__link active">
+              <i class="ri-home-line nav__icon"></i>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <i class="ri-user-line nav__icon"></i>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <i class="ri-settings-line nav__icon"></i>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <i class="ri-briefcase-line nav__icon"></i>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <i class="ri-send-plane-line nav__icon"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Profile -->
+      <div class="profile">
+        <div class="profile__img">
+          <img src="images/profile.jpg" alt="sandy robert" />
+        </div>
+        <h1 class="profile__name">Sandy Robert</h1>
+        <p class="profile__txt">
+          My name is Sandy Robert and I'm a full-stack web developer at Microsoft.
+        </p>
+        <a href="#" class="btn btn--primary">Hire me</a>
+      </div>
+      <!-- Social -->
+      <ul class="social flex flex-justify-center">
+        <li class="social__item">
+          <a href="#" class="social__link social__link--1">
+            <i class="ri-instagram-line social__icon"></i>
+          </a>
+          <div class="social__followers">
+            <h3 class="social__count">25k</h3>
+            <p class="social__txt">Followers</p>
+          </div>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__link--2">
+            <i class="ri-telegram-line social__icon"></i>
+          </a>
+          <div class="social__followers">
+            <h3 class="social__count">9k</h3>
+            <p class="social__txt">Followers</p>
+          </div>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__link--3">
+            <i class="ri-github-line social__icon"></i>
+          </a>
+          <div class="social__followers">
+            <h3 class="social__count">12.7k</h3>
+            <p class="social__txt">Followers</p>
+          </div>
+        </li>
+      </ul>
+    </article>
+  </main>
+
+
+  <script src="js/index.js"></script>
+</body>
+</html>
